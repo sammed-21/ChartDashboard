@@ -1,63 +1,61 @@
-
-'use client' // if you use app dir, don't forget this line
+"use client"; // if you use app dir, don't forget this line
 
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 function DounutChart() {
- 
   let options = {
     labels: ["Basic Tees", "Custom Short Pants", "Super Hoodies"],
     chart: {
-      id: 'DounutChart',
-      width: '200px',
-      height: '200px',
+      id: "DounutChart",
+      // Set a responsive width for the chart
+      width: "100%", // This will make the chart scale to the container width
+
+      // Keep the height fixed or adjust it as needed
+      height: "200px",
+
       toolbar: {
         show: false,
       },
+      // Change the position of the chart to "top" or "bottom" as needed
+      position: "left", // or 'bottom'
     },
     legend: {
       show: true,
-      position: 'top', // Position the legend at the bottom
-      horizontalAlign: 'right', // Center-align the legend horizontally
+      // Align the legend to the "start", "center", or "end" as needed
+      horizontalalign: "center", // or 'start' or 'end'
       floating: false,
       margin: {
-        top: 10, // Adjust the top margin as needed
-        bottom: 10, // Adjust the bottom margin as needed
+        top: 20, // Adjust the top margin as needed
+        bottom: 20, // Adjust the bottom margin as needed
       },
+      // Change the position of the legend to "top" or "bottom" as needed
+      position: "right", // or 'bottom'
     },
     plotOptions: {
       pie: {
-        position:"right",
+        position: "right",
         labels: {
           width: 100,
           show: true,
           position: "bottom",
         },
-        customScale: 0.7,
+        customScale: 0.9,
+        position: "left", // Change the position of the pie chart to "left" as needed
       },
     },
     dataLabels: {
       enabled: false,
     },
     colors: ["#98D89E", "#EE8484", "#F6DC7D"],
-    style: {
-      borderRadius: "10px",
-    },
-    background: {
-      width: "100%",
-      borderRadius: 10,
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
+
     subtitle: {
       text: "May - June 2021",
       align: "right", // Left-align the subtitle
       margin: 10,
       offsetX: 0, // Set horizontal offset as needed
       offsetY: 0,
-      floating: 'left',
+      floating: "left",
       style: {
         fontSize: "12px",
         fontWeight: "normal",
@@ -72,55 +70,65 @@ function DounutChart() {
     stroke: {
       show: true,
       curve: "round",
-      lineCap: '',
+      lineCap: "",
       borderRadius: "5px",
-  
-      
-  },
+    },
     responsive: [
       {
-        breakpoint: 660, // Adjust this breakpoint as needed
+        breakpoint: 660,
         options: {
-          height:"100px",
-          legend: {
-            enabled:false
-          },    subtitle: {
-            text: "May - June 2021",
-            align: "right", // Left-align the subtitle
-            margin: 10,
-            offsetX: 0, // Set horizontal offset as needed
-            offsetY: 0,
-            floating: 'right',
-            
-            style: {
-              fontSize: "12px",
-              fontWeight: "normal",
-              fontFamily: undefined,
-              color: "gray",
-            },
-          },
           chart: {
-            width: "100%", // Set 100% width for mobile screens
-            height: "100%",
-            legend: {
-              enabled:false
-            },
-            // Adjust the height as needed
-            padding: {
-              top: "80px", // Adjust padding for mobile screens
-              left: "10px", // Adjust padding for mobile screens
-            },
+            width: "80%",
+            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
           },
         },
-      }
-    ]
-  }
+      },
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: "100%", // Set chart width to 100% for small screens
+            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
+          },
+        },
+      },
+
+      {
+        breakpoint: 420,
+        options: {
+          chart: {
+            width: "100%",
+            padding:0,// Set chart width to 100% for small screens
+            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
+          },
+          legend: {
+            show: true,
+            // Align the legend to the "start", "center", or "end" as needed
+            horizontalalign: "end", // or 'start' or 'end'
+            floating: false,
+            margin: {
+              top: 20, // Adjust the top margin as needed
+              bottom: 20, // Adjust the bottom margin as needed
+            },
+            // Change the position of the legend to "top" or "bottom" as needed
+            position: "bottom", // or 'bottom'
+          },
+        },
+      },
+    ],
+  };
   let series = [23, 34, 12];
 
   return (
     <>
-      <div className=" ">
-      <ApexChart type="donut" width={500} height={200}  options={options} series={series} />
+      <div className="max-sm:py-10  ">
+        <ApexChart
+          type="donut"
+          width={500}
+          height={200}
+          options={options}
+          series={series}
+        />
       </div>
     </>
   );

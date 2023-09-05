@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {" "}
+        <div className="p-1">
+
         <AuthProvider>{children}</AuthProvider>
+        </div>
       </body>
     </html>
   );
