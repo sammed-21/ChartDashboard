@@ -31,12 +31,12 @@ const MainSection = () => {
     setIsOpen(!isOpen); // Toggle modal visibility
   };
   return (
-    <div>
+    <div className="max-md:w-full">
 
-    <div className="w-full overflow-hidden h-full px-3 flex flex-col justify-center  max-md:w-full no-scrollbar">
-      <div className="flex justify-between my-3">
-        <h1 className="font-bold text-2xl max-sm:text-sm">Dashboard</h1>
-        <div className="flex gap-2">
+    <div className="w-full overflow-y-auto h-full px-2 flex flex-col justify-center  max-md:w-full no-scrollbar">
+      <div className="flex w-full justify-between my-3 max-sm:items-end max-sm:justify-end">
+        <h1 className="font-bold text-2xl  max-sm:hidden">Dashboard</h1>
+        <div className="flex gap-2 w-full justify-end items-end max-sm:items-end">
 
         <div
           htmlFor="email"
@@ -55,10 +55,10 @@ const MainSection = () => {
             type="text"
             name="search"
             placeholder="Search..."
-            className=" py-2 px-5 w-full rounded-full"
+            className=" py-2 px-5 w-full max-sm:px-3 rounded-full"
             />
             </div>
-          <div>
+          <div className="w-20 h-9">
             
           {session?.user &&(
             
@@ -127,7 +127,7 @@ const MainSection = () => {
             </div>
           ) : (
             // Render user data when userProfileData.name is not empty
-            <div className="flex w-full px-4 flex-col gap-2 max-sm:flex-col max-sm:items-start ">
+            <div className="flex min-w-full px-4 flex-col gap-2 max-sm:flex-col max-sm:items-start ">
               <h1 className="font-bold justify-around px-3">
                 {userProfileData.name}
               </h1>
