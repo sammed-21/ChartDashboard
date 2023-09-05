@@ -31,7 +31,7 @@ const MainSection = () => {
     setIsOpen(!isOpen); // Toggle modal visibility
   };
   return (
-    <div className="max-md:w-full max-sm:pl-3 overflow-x-hidden relative rounded-lg pr-3">
+    <div className="max-md:w-fit max-sm:pl-3 overflow-x-hidden relative rounded-lg pr-3">
       <div className="w-full overflow-y-auto h-full   flex flex-col justify-center max-md:w-full no-scrollbar">
         <div className="flex w-full justify-between my-2 max-sm:items-end max-md:justify-center max-sm:justify-end">
           <h1 className="font-bold text-2xl  max-sm:hidden">Dashboard</h1>
@@ -123,7 +123,7 @@ const MainSection = () => {
                     onClick={toggleModal}
                     data-modal-target="defaultModal"
                     data-modal-toggle="defaultModal"
-                    className="flex justify-center items-center w-16 h-[3.7rem] rounded-full "
+                    className="flex justify-center items-center w-16 h-[3.7rem] bg-gray-200 rounded-full "
                   >
                     <Image
                       src={Control}
