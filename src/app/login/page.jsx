@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import discord from "/public/carbon_logo-discord.png"
@@ -5,8 +6,12 @@ import discord from "/public/carbon_logo-discord.png"
 import linkedin from "/public/carbon_logo-linkedin.png";
 import github from "/public/github.png";
 import Vector from "/public/Vector.png";
+import { useSession ,signIn,signOut} from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const { data: session,status  } = useSession();
+  console.log(status)
   return (
     <div className="relative   bg-gray-100 md:overflow-hidden md:flex w-full ">
       <div className="w-1/2 hidden md:flex relative">
@@ -39,7 +44,7 @@ const Login = () => {
               <p className="text-sm mt-4 text-black">Sign in to your account</p>
               <div className="w-full gap-5 flex justify-around">
                 {/* <button className="flex bg-white w-1/2"> */}
-                <button className="bg-white border py-1 w-1/2 rounded-xl mt-5 flex justify-around items-center text-sm hover:scale-105 duration-300">
+                <button onClick={()=>signIn()} className="bg-white border py-1 w-1/2 rounded-xl mt-5 flex justify-around items-center text-sm hover:scale-105 duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

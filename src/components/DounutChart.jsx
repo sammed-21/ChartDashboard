@@ -11,9 +11,9 @@ function DounutChart() {
     labels: ["Basic Tees", "Custom Short Pants", "Super Hoodies"],
     chart: {
       id: 'DounutChart',
-      height: "400",
-      width: "400",
-    },
+      width: '200px',
+  height: '200px'
+    },legend: {floating: true} ,
     bar: {
       borderRadius:"rounded"
     }, 
@@ -22,11 +22,7 @@ function DounutChart() {
       align: "left", // Left-align the chart title
       offsetX: 0, // Set horizontal offset as needed
     },
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
+  
     plotOptions: {
       pie: {
         labels: {
@@ -81,16 +77,35 @@ function DounutChart() {
   },
     responsive: [
       {
-        breakpoint: 300, // Adjust this breakpoint as needed
+        breakpoint: 660, // Adjust this breakpoint as needed
         options: {
+          height:"100px",
           legend: {
             enabled:false
+          },    subtitle: {
+            text: "May - June 2021",
+            align: "right", // Left-align the subtitle
+            margin: 10,
+            offsetX: 0, // Set horizontal offset as needed
+            offsetY: 0,
+            floating: 'right',
+            
+            style: {
+              fontSize: "12px",
+              fontWeight: "normal",
+              fontFamily: undefined,
+              color: "gray",
+            },
           },
           chart: {
             width: "100%", // Set 100% width for mobile screens
-            height: "100%", // Adjust the height as needed
+            height: "100%",
+            legend: {
+              enabled:false
+            },
+            // Adjust the height as needed
             padding: {
-              top: "10px", // Adjust padding for mobile screens
+              top: "80px", // Adjust padding for mobile screens
               left: "10px", // Adjust padding for mobile screens
             },
           },
@@ -102,8 +117,8 @@ function DounutChart() {
 
   return (
     <>
-      <div className="w-full overflow-hidden relative  justify-between items-right py-3 px-3 max-md:h-[9rem] ">
-      <ApexChart type="donut" height={200} width={400} options={options} series={series} />
+      <div className=" ">
+      <ApexChart type="donut" width={500} height={200}  options={options} series={series} />
       </div>
     </>
   );

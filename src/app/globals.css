@@ -28,3 +28,15 @@
 .donut-chart {
   border-radius: 40%;
 }
+.border-b-2 {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  width: 45%;
+  border-color: #3F84F8;
+}
+.nonborder {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  width: 45%;
+  border-color: #D9D9D9;
+}

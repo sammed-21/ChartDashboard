@@ -6,13 +6,13 @@ import downArrow from "/public/downArrow.png";
 export const dummyBoxData = [
   {
     image: TotalLIke,
-    bgColor: "#10b981",
+    bgColor: "#98D89E",
     // bgColor: "#10b981",
     text: "Total Revenues",
     number: "$2,129,430",
 
     downArrow: downArrow,
-    percentage: "2.5%",
+    percentage: "8.5%",
   },
   {
     image: Transaction,
@@ -20,7 +20,7 @@ export const dummyBoxData = [
     text: "Total Transaction",
     number: "1520",
 
-    percentage: "2.5%",
+    percentage: "5.5%",
   },
   {
     image: Like,
@@ -36,7 +36,7 @@ export const dummyBoxData = [
     text: "Total Users",
     number: "9721",
 
-    percentage: "2.5%",
+    percentage: "1.5%",
   },
 ];
 
