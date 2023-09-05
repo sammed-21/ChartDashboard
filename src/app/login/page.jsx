@@ -5,7 +5,7 @@ import discord from "/public/carbon_logo-discord.png"
 // import discord from "/public/carbon_logo-discord.png";
 import linkedin from "/public/carbon_logo-linkedin.png";
 import github from "/public/github.png";
-import Vector from "/public/Vector.png";
+import Vector from "/public/twiter.png";
 import { useSession ,signIn,signOut} from "next-auth/react";
 import { useRouter } from "next/navigation";
 

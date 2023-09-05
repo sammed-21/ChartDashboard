@@ -7,30 +7,32 @@ const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 function DounutChart() {
  
   let options = {
-
     labels: ["Basic Tees", "Custom Short Pants", "Super Hoodies"],
     chart: {
       id: 'DounutChart',
       width: '200px',
-  height: '200px'
-    },legend: {floating: true} ,
-    bar: {
-      borderRadius:"rounded"
-    }, 
-    title: {
-      text: "Top Product",
-      align: "left", // Left-align the chart title
-      offsetX: 0, // Set horizontal offset as needed
+      height: '200px',
+      toolbar: {
+        show: false,
+      },
     },
-  
+    legend: {
+      show: true,
+      position: 'top', // Position the legend at the bottom
+      horizontalAlign: 'right', // Center-align the legend horizontally
+      floating: false,
+      margin: {
+        top: 10, // Adjust the top margin as needed
+        bottom: 10, // Adjust the bottom margin as needed
+      },
+    },
     plotOptions: {
       pie: {
+        position:"right",
         labels: {
           width: 100,
           show: true,
-          float: 'right',
-        
-          position: "bottom", // Align labels at the bottom of the chart
+          position: "bottom",
         },
         customScale: 0.7,
       },

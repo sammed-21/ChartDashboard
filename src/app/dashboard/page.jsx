@@ -5,7 +5,7 @@ import MainSection from "@/components/MainSection";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-row min-w-full gap-2 bg-gray-100">
+    <div className="flex flex-row min-w-full p-2 gap-2 bg-gray-100">
       <div className="flex-1  z-50 pl-3 max-w:[30%] max-md:fixed max-h:[95vh]">
         <SideBar />
       </div>
