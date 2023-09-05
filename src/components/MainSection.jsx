@@ -143,7 +143,7 @@ const MainSection = () => {
                   bgColor={"#FFE9EC"}
                   />
               </div>
-              <div className="flex justify-between px-3 max-sm:flex-col  max-sm:items-start gap-3 ">
+              <div className="flex min-w-full justify-between px-3 max-sm:flex-col max-md:h-full max-sm:items-start gap-3 ">
                 <ContactBox
                   image={logoMail}
                   text={userProfileData.email}

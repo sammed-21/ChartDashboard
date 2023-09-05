@@ -15,7 +15,7 @@ const SideBar = () => {
   return (
     // try something diff in end mobile view
     <nav
-      className={`loginbackground rounded-lg p-3   z-50 text-white w-72 transition duration-700 ease-in-out max-md:w-fit max-md:w-fit `}
+      className={`loginbackground rounded-lg p-3   z-50 text-white w-72 transition duration-700 ease-in-out  max-md:w-fit `}
     >
       <div className="p-5 py-5 md:flex min-h-[95vh] max-sm:p-2  ">
         <div className="flex justify-end md:hidden transition translate-x-2">

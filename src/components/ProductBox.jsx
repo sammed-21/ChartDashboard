@@ -15,7 +15,7 @@ const ProductBox = ({
   //   percentage = "2.3%",
 }) => {
   return (
-    <div className="min-w-[17.3rem] max-md:w-full bg-slate-50 max-h-[7.5rem] rounded-xl max-sm:min-w-[13rem] drop-shadow-2xl">
+    <div className="min-w-[17.3rem]  bg-slate-50 max-h-[7.5rem] m rounded-xl max-sm:min-w-[12rem] max-xl:min-w-[14rem] drop-shadow-2xl">
       <div className="flex flex-col p-4 ">
         <div>
           {/* {console.log(bgColor)} */}
