@@ -36,7 +36,7 @@ const UserProfile = ({ setIsOpen, setUserProfileData }) => {
   return (
     <div
       id="authentication-modal"
-      className={`text-black fixed bg-backdrop-blur-sm flex justify-center items-center z-50 bg-black/50 backdrop-blur-sm bg-blur w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-0rem)] max-md:left-0 max-md:top-0 max-md:min-w-[100%]  max-h-full`}
+      className={`!z-50 text-black fixed bg-backdrop-blur-sm flex justify-center items-center  bg-black/50 backdrop-blur-sm bg-blur w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-0rem)] max-md:left-0 max-md:top-0 max-md:min-w-[100%]  max-h-full`}
     >
       <div className="relative w-full max-w-md max-h-full p-3">
         <div className="relative text-black bg-white rounded-lg shadow  ">

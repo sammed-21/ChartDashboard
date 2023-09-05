@@ -11,8 +11,7 @@ import { useRouter } from "next/navigation";
 
 const Login = () => {
   const { data: session,status  } = useSession();
-  console.log(status)
-  return (
+   return (
     <div className="relative   bg-gray-100 md:overflow-hidden md:flex w-full ">
       <div className="w-1/2 hidden md:flex relative">
         <span className="bg-gradient-to-b from-blue-500 via-blue-600 to-blue-700 border border-blue-500 min-h-[180vh] -left-28 absolute z-10 w-full -top-[20vh] overflow-visible rotate-12   inset-0">

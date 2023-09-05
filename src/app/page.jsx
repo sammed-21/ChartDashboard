@@ -5,8 +5,7 @@ import Dashboard from "./dashboard/page";
 // import { SignOut, signIn, getProviders } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-console.log(process.env.NEXT_GOOGLE_CLIENT_ID)
-
+ 
 export default function Home() {
   const session = useSession();
   return (

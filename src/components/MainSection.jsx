@@ -18,8 +18,7 @@ import DounutChart from "./DounutChart";
 
 const MainSection = () => {
   const { data: session } = useSession();
-  // console.log(session.user.image)
-  const [isOpen, setIsOpen] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
   const [userProfileData, setUserProfileData] = useState({
     name: "",
     email: "",
@@ -27,8 +26,7 @@ const MainSection = () => {
     instaLink: "",
     youTubeLink: "",
   });
-  // console.log(userProfileData);
-  const toggleModal = () => {
+   const toggleModal = () => {
     setIsOpen(!isOpen); // Toggle modal visibility
   };
   return (
@@ -81,8 +79,8 @@ const MainSection = () => {
             </div>
           </div>
         </div>
-        <div className="overflow-y-auto max-md:ml-9 z-10 max-xl:h-[90vh] w-full no-scrollbar">
-          <section className="mt-1 w-full flex flex-wrap gap-4 max-md:items-center max-md:justify-center ">
+        <div className="overflow-y-auto max-md:ml-9 max-xl:h-[90vh] w-full no-scrollbar">
+          <section className="mt-1 w-full flex flex-wrap gap-4 max-md:items-start max-md:justify-center ">
             {dummyBoxData.map((item, i) => {
               return (
                 <div key={i}>

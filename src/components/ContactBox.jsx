@@ -17,8 +17,7 @@ const ProductBox = ({
     // <div className="min-w-[17.3rem] max-md:w-full bg-slate-50 max-h-[7.5rem] rounded-xl max-sm:min-w-[13rem] drop-shadow-2xl">
       <div className="flex  justify-center items-center gap-2 ">
         {/* <div > */}
-          {/* {console.log(bgColor)} */}
-          <div
+           <div
             className={`w-7 items-center justify-center flex rounded-full h-7 `}
             style={{ backgroundColor: [bgColor] }}
           >
