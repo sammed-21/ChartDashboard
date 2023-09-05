@@ -26,11 +26,12 @@ const MainSection = () => {
     instaLink: "",
     youTubeLink: "",
   });
-   const toggleModal = () => {
+  // console.log(userProfileData);
+  const toggleModal = () => {
     setIsOpen(!isOpen); // Toggle modal visibility
   };
   return (
-    <div className="max-md:w-full max-sm:pl-3 overflow-x-hidden rounded-lg pr-3">
+    <div className="max-md:w-full max-sm:pl-3 overflow-x-hidden relative rounded-lg pr-3">
       <div className="w-full overflow-y-auto h-full   flex flex-col justify-center max-md:w-full no-scrollbar">
         <div className="flex w-full justify-between my-2 max-sm:items-end max-md:justify-center max-sm:justify-end">
           <h1 className="font-bold text-2xl  max-sm:hidden">Dashboard</h1>
