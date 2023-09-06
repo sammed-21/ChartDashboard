@@ -15,11 +15,11 @@ const SideBar = () => {
   return (
     // try something diff in end mobile view
     <nav
-      className={`loginbackground rounded-lg h-[95vh] items-center pt-8 flex justify-between flex-col text-white  transition duration-700 ease-in-out  `}
+      className={`loginbackground rounded-lg  items-center pt-8 flex justify-between flex-col text-white  transition duration-700 ease-in-out  `}
       // className={`loginbackground rounded-lg p-3   z-20 text-white w-72 transition duration-700 ease-in-out  max-md:w-fit max-sm:mr-1`}
     >
-      <div className="p-5 py-5 md:flex min-h-[95vh] max-sm:p-2  ">
-        <div className="flex justify-end md:hidden transition translate-x-2">
+      <div className="p-5 relative  md:flex min-h-[95vh] justify-start max-sm:p-2  ">
+        <div className="flex  justify-end md:hidden transition translate-x-2">
           {openSidebar ? (
             <GrClose
               className="invert"
@@ -39,7 +39,7 @@ const SideBar = () => {
           }   min-h-[90vh]
           items-center
           flex-col
-          py-5
+          py-9
           
           justify-between
           flex max-md:px-3`}

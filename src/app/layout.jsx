@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {" "}
-        <div className="  ">
+        <div className="bg-gray-200">
 
         <AuthProvider>{children}</AuthProvider>
         </div>

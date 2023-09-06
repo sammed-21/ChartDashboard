@@ -8,29 +8,26 @@ function DounutChart() {
     labels: ["Basic Tees", "Custom Short Pants", "Super Hoodies"],
     chart: {
       id: "DounutChart",
-      // Set a responsive width for the chart
-      width: "100%", // This will make the chart scale to the container width
+       width: "100%", 
 
-      // Keep the height fixed or adjust it as needed
-      height: "200px",
+       height: "200px",
 
       toolbar: {
         show: false,
       },
-      // Change the position of the chart to "top" or "bottom" as needed
-      position: "left", // or 'bottom'
+       
+      position: "left",  
     },
     legend: {
       show: true,
-      // Align the legend to the "start", "center", or "end" as needed
-      horizontalalign: "center", // or 'start' or 'end'
+      
+      horizontalalign: "center",  
       floating: false,
       margin: {
-        top: 20, // Adjust the top margin as needed
-        bottom: 20, // Adjust the bottom margin as needed
+        top: 20,  
+        bottom: 20, 
       },
-      // Change the position of the legend to "top" or "bottom" as needed
-      position: "right", // or 'bottom'
+      position: "right",  
     },
     plotOptions: {
       pie: {
@@ -79,7 +76,7 @@ function DounutChart() {
         options: {
           chart: {
             width: "80%",
-            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
+            innerHeight: "200px", 
           },
         },
       },
@@ -87,8 +84,8 @@ function DounutChart() {
         breakpoint: 480,
         options: {
           chart: {
-            width: "100%", // Set chart width to 100% for small screens
-            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
+            width: "100%", 
+            innerHeight: "200px",
           },
         },
       },
@@ -98,19 +95,19 @@ function DounutChart() {
         options: {
           chart: {
             width: "100%",
-            padding:0,// Set chart width to 100% for small screens
-            innerHeight: "200px", // Set chart width to 80% for medium-sized screens
+            padding:0,
+            innerHeight: "200px",
           },
           legend: {
             show: true,
-            // Align the legend to the "start", "center", or "end" as needed
-            horizontalalign: "end", // or 'start' or 'end'
+            
+            horizontalalign: "end", 
             floating: false,
             margin: {
-              top: 20, // Adjust the top margin as needed
-              bottom: 20, // Adjust the bottom margin as needed
+              top: 20, 
+              bottom: 20,  
             },
-            // Change the position of the legend to "top" or "bottom" as needed
+            
             position: "bottom", // or 'bottom'
           },
         },
