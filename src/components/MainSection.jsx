@@ -75,7 +75,7 @@ const MainSection = () => {
         <main className="max-h-[90vh] min-w-full max-sm:h-[90vh] overflow-y-auto no-scrollbar" >
 
         {/* <div className="overflow-y-auto max-md:ml-9 max-xl:h-[90vh] w-full no-scrollbar"> */}
-        <div className="flex flex-wrap w-full justify-center items-center gap-3 md:gap-6">
+        <div className="flex flex-wrap w-full justify-center items-center gap-3 md:gap-9">
           {dummyBoxData.map((item, i) => (
             <ProductBox
               key={i}
